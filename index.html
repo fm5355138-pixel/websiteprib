@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "345351348e6d40909540cf584a329e84"}'></script><!-- End Cloudflare Web Analytics -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO -->
+  <title>Fadel Muhammad | Frontend Developer</title>
+  <meta name="description" content="Portfolio personal Fadel Muhammad, Frontend Developer dari Smk Taruna Bangsa, Bekasi Utara. Spesialis UI modern, JavaScript, TypeScript, dan ekosistem React." />
+  <meta name="author" content="Fadel Muhammad" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="Fadel Muhammad, frontend developer, web developer, portfolio, JavaScript, TypeScript, React, Bekasi, Kota Bekasi, Fadel Muhammad" />
+  <link rel="canonical" href="" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:title" content="Fadel | Frontend Developer" />
+  <meta property="og:description" content="Website pribadi saya yang berisi pengenalan tentang diri saya." />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:locale" content="id_ID" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="" />
+  <meta name="twitter:title" content="Fadel Muhammad | Frontend Developer" />
+  <meta name="twitter:description" content="Website pribadi saya yang berisi pengenalan tentang diri saya." />
+  <meta name="twitter:image" content="" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Fadel Muhammad",
+    "url": "",
+    "jobTitle": "Frontend Developer",
+    "email": "fm5355138@email.com",
+    "image": "",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Smk Taruna Bangsa",
+      "addressRegion": "Kota Bekasi, Indonesia",
+      "addressCountry": "ID"
+    },
+    "sameAs": [
+      "https://github.com/fm5355138-pixel",
+      "https://instagram.com/fzxdellw",
+      ""
+    ]
+  }
+  </script>
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/enhancements.css" />
+  <style>
+    /* =============================================
+       SPOTIFY PAGE — inline styles
+       Semua warna pakai CSS variable tema yang ada
+       ============================================= */
+
+    #page-links .page-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .spotify-open-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: #1DB954;
+      color: #fff !important;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 20px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: opacity 0.15s;
+      flex-shrink: 0;
+      margin-top: 4px;
+    }
+    .spotify-open-btn:hover { opacity: 0.82; }
+
+    /* NOW PLAYING */
+    .sp-now-playing {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(29, 185, 84, 0.07);
+      border: 1px solid rgba(29, 185, 84, 0.22);
+      border-radius: var(--radius);
+      padding: 12px 16px;
+      margin-bottom: 1.25rem;
+      text-decoration: none;
+      transition: background 0.15s;
+      cursor: pointer;
+    }
+    .sp-now-playing:hover { background: rgba(29, 185, 84, 0.12); }
+    .sp-now-playing-art {
+      width: 44px; height: 44px;
+      border-radius: 6px;
+      background: var(--panel-3);
+      flex-shrink: 0; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .sp-now-playing-art img { width: 100%; height: 100%; object-fit: cover; }
+    .sp-now-playing-art svg { opacity: 0.35; }
+    .sp-now-playing-info { flex: 1; min-width: 0; }
+    .sp-now-playing-label {
+      font-size: 10px; font-weight: 600; color: #1DB954;
+      text-transform: uppercase; letter-spacing: 0.07em;
+      margin: 0 0 2px;
+      display: flex; align-items: center; gap: 5px;
+    }
+    .sp-pulse {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: #1DB954;
+      animation: spPulse 1.5s ease-in-out infinite;
+    }
+    @keyframes spPulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.35; transform: scale(0.65); }
+    }
+    .sp-now-playing-track {
+      font-size: 14px; font-weight: 500; color: var(--text);
+      margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .sp-now-playing-artist {
+      font-size: 12px; color: var(--text-soft);
+      margin: 2px 0 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .sp-progress-wrap { flex-shrink: 0; min-width: 70px; text-align: right; }
+    .sp-progress-bar {
+      width: 70px; height: 3px;
+      background: var(--line-strong);
+      border-radius: 2px; overflow: hidden; margin-bottom: 4px;
+    }
+    .sp-progress-fill {
+      height: 100%; background: #1DB954;
+      border-radius: 2px; transition: width 1s linear;
+    }
+    .sp-progress-time { font-size: 10px; color: var(--text-dim); }
+
+    /* PROFILE CARD */
+    .sp-profile-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .sp-profile-avatar {
+      width: 60px; height: 60px; border-radius: 50%;
+      background: var(--panel-3); flex-shrink: 0;
+      overflow: hidden; display: flex; align-items: center; justify-content: center;
+      border: 2px solid rgba(29, 185, 84, 0.28);
+    }
+    .sp-profile-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .sp-profile-avatar svg { opacity: 0.35; }
+    .sp-profile-info { flex: 1; min-width: 0; }
+    .sp-profile-name { font-size: 16px; font-weight: 600; color: var(--text); margin: 0 0 3px; }
+    .sp-profile-handle { font-size: 13px; color: var(--text-soft); margin: 0; }
+    .sp-profile-stats { display: flex; gap: 20px; margin-top: 10px; flex-wrap: wrap; }
+    .sp-profile-stat-val { font-size: 15px; font-weight: 600; color: var(--text); }
+    .sp-profile-stat-lbl { font-size: 11px; color: var(--text-dim); margin-top: 1px; }
+
+    /* SECTION */
+    .sp-section { margin-bottom: 1.5rem; }
+    .sp-section-header {
+      display: flex; align-items: center;
+      justify-content: space-between; margin-bottom: 10px;
+    }
+    .sp-section-title { font-size: 14px; font-weight: 600; color: var(--text); margin: 0; }
+    .sp-section-count { font-size: 12px; color: var(--text-dim); }
+
+    /* PLAYLIST GRID */
+    .sp-playlist-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    @media (max-width: 480px) { .sp-playlist-grid { grid-template-columns: repeat(2, 1fr); } }
+    .sp-playlist-item {
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 10px;
+      text-decoration: none; transition: border-color 0.15s, background 0.15s; display: block;
+    }
+    .sp-playlist-item:hover { border-color: var(--line-strong); background: var(--panel-2); }
+    .sp-playlist-art {
+      width: 100%; aspect-ratio: 1; border-radius: 8px;
+      background: var(--panel-3); overflow: hidden;
+      margin-bottom: 8px; display: flex; align-items: center; justify-content: center;
+    }
+    .sp-playlist-art img { width: 100%; height: 100%; object-fit: cover; }
+    .sp-playlist-art svg { opacity: 0.28; }
+    .sp-playlist-name {
+      font-size: 12px; font-weight: 500; color: var(--text);
+      margin: 0 0 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .sp-playlist-meta { font-size: 11px; color: var(--text-dim); margin: 0; }
+
+    /* TRACK LIST */
+    .sp-track-list { display: flex; flex-direction: column; gap: 1px; }
+    .sp-track {
+      display: flex; align-items: center; gap: 10px;
+      padding: 7px 10px; border-radius: 8px;
+      text-decoration: none; transition: background 0.12s;
+    }
+    .sp-track:hover { background: var(--panel-2); }
+    .sp-track-num { font-size: 12px; color: var(--text-dim); width: 18px; text-align: center; flex-shrink: 0; }
+    .sp-track-art {
+      width: 36px; height: 36px; border-radius: 4px;
+      background: var(--panel-3); flex-shrink: 0;
+      overflow: hidden; display: flex; align-items: center; justify-content: center;
+    }
+    .sp-track-art img { width: 100%; height: 100%; object-fit: cover; }
+    .sp-track-art svg { opacity: 0.28; }
+    .sp-track-info { flex: 1; min-width: 0; }
+    .sp-track-name {
+      font-size: 13px; font-weight: 500; color: var(--text);
+      margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .sp-track-artist {
+      font-size: 11px; color: var(--text-soft);
+      margin: 2px 0 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .sp-track-dur { font-size: 11px; color: var(--text-dim); flex-shrink: 0; }
+    .sp-track-heart { font-size: 13px; color: #1DB954; flex-shrink: 0; line-height: 1; }
+
+    /* ARTIST GRID */
+    .sp-artist-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
+    }
+    @media (max-width: 480px) { .sp-artist-grid { grid-template-columns: repeat(3, 1fr); } }
+    .sp-artist-item {
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 12px 8px;
+      text-decoration: none;
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      text-align: center; transition: border-color 0.15s, background 0.15s;
+    }
+    .sp-artist-item:hover { border-color: var(--line-strong); background: var(--panel-2); }
+    .sp-artist-avatar {
+      width: 52px; height: 52px; border-radius: 50%;
+      background: var(--panel-3); overflow: hidden;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .sp-artist-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .sp-artist-avatar svg { opacity: 0.28; }
+    .sp-artist-name {
+      font-size: 12px; font-weight: 500; color: var(--text);
+      margin: 0; width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .sp-artist-genre { font-size: 10px; color: var(--text-dim); margin: 0; text-transform: capitalize; }
+
+    /* LOADING & ERROR */
+    .sp-loading {
+      display: flex; align-items: center; justify-content: center;
+      padding: 3rem 0; color: var(--text-dim); font-size: 14px; gap: 10px;
+    }
+    .sp-spinner {
+      width: 18px; height: 18px;
+      border: 2px solid var(--line-strong);
+      border-top-color: #1DB954;
+      border-radius: 50%;
+      animation: spSpin 0.7s linear infinite;
+    }
+    @keyframes spSpin { to { transform: rotate(360deg); } }
+    .sp-error { text-align: center; padding: 2rem 0; color: var(--text-dim); font-size: 13px; }
+  </style>
+</head>
+<body>
+  <div id="cmd-overlay" class="cmd-overlay hidden" aria-hidden="true">
+    <div class="cmd-shell">
+      <div class="cmd-header">
+        <span id="cmd-icon"></span>
+        <input id="cmd-input" type="text" placeholder="Cari halaman..." autocomplete="off" />
+        <span class="cmd-kbd">ESC</span>
+      </div>
+      <div id="cmd-results" class="cmd-results"></div>
+    </div>
+  </div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sb-brand">
+      <div class="profile-box">
+        <div class="avatar-wrap">
+          <img id="profile-avatar" class="profile-avatar" src="" alt="Foto profile" />
+        </div>
+        <div class="profile-name-row">
+          <h2 id="profile-name" class="profile-name"></h2>
+          <span id="verified-icon" class="verified-icon"></span>
+        </div>
+        <div class="status-pill" id="profile-status"></div>
+      </div>
+    </div>
+
+    <div class="sb-nav-wrap custom-scrollbar">
+      <nav class="sb-nav" id="sb-nav"></nav>
+    </div>
+
+    <div class="sb-controls">
+      <div class="control-row">
+        <div class="lang-switch" role="group" aria-label="Pilih bahasa">
+          <button class="lang-btn" data-lang="en">US</button>
+          <button class="lang-btn active" data-lang="id">ID</button>
+        </div>
+      </div>
+      <div class="control-row">
+        <div class="theme-switch" id="theme-switch"></div>
+        <button id="layout-toggle" class="single-icon-btn" title="Ganti Layout" type="button">
+          <span id="layout-icon"></span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <header class="mobile-header">
+    <div class="mobile-brand">
+      <span id="mobile-name" class="mobile-site-name"></span>
+    </div>
+    <button id="mobile-menu-btn" class="mobile-hamburger" type="button" aria-label="Menu">
+      <span class="ham-bar ham-bar-top"></span>
+      <span class="ham-bar ham-bar-mid"></span>
+      <span class="ham-bar ham-bar-bot"></span>
+    </button>
+  </header>
+
+  <div id="mobile-drawer" class="mobile-drawer">
+    <div class="mob-left-panel">
+      <div class="mob-drawer-top">
+
+        <!-- Baris 1: foto kiri, X kanan -->
+        <div class="mob-profile-row">
+          <img id="mobile-avatar" src="" alt="Avatar" class="mob-avatar" />
+          <button id="mob-close-btn" class="mob-close-btn" type="button" aria-label="Tutup menu">&#x2715;</button>
+        </div>
+
+        <!-- Baris 2: nama kiri, tombol ID + tema kanan -->
+        <div class="mob-name-controls-row">
+          <div class="mob-name-row">
+            <span id="mob-profile-name" class="mob-profile-name"></span>
+            <span id="mob-verified-icon" class="mob-verified"></span>
+          </div>
+          <div class="mob-top-controls">
+            <button class="mob-round-btn mob-lang-toggle" id="mob-lang-toggle" type="button">ID</button>
+            <button class="mob-round-btn mob-theme-cycle" id="mob-theme-cycle" type="button" title="Ganti Tema"></button>
+          </div>
+        </div>
+
+      </div>
+      <nav class="mob-nav" id="mob-nav"></nav>
+    </div>
+    <div class="mob-right-panel" id="mob-right-panel"></div>
+  </div>
+
+  <main class="main">
+    <section class="page" id="page-beranda">
+      <div class="page-wrap">
+        <header class="page-head hero-head">
+          <h1 id="hero-title" class="page-title"></h1>
+          <p id="hero-sub" class="page-sub"></p>
+          <ul id="hero-meta" class="hero-meta"></ul>
+          <p id="hero-p1" class="hero-p"></p>
+          <p id="hero-p2" class="hero-p"></p>
+        </header>
+
+        <section class="section-block">
+          <h2 class="section-title"><span id="code-icon"></span><span id="skills-title-text">Keahlian</span></h2>
+          <p class="section-sub" id="skills-sub-text">Keahlian profesional saya.</p>
+          <div id="skill-tabs" class="skill-tabs"></div>
+          <div id="skill-grid" class="skill-grid"></div>
+        </section>
+      </div>
+    </section>
+
+    <section class="page" id="page-tentang">
+      <div class="page-wrap">
+        <header class="page-head">
+          <h1 class="page-title">Tentang</h1>
+          <p class="page-sub">Pengenalan singkat mengenai siapa saya.</p>
+        </header>
+
+        <section class="section-plain">
+          <div id="about-paragraphs" class="about-paragraphs"></div>
+          <div class="signature-wrap">
+            <p id="salutation-text">Salam hangat,</p>
+            <div id="about-signature" class="signature"></div>
+          </div>
+        </section>
+
+        <section class="section-plain">
+          <h2 class="section-title"><span id="briefcase-icon"></span><span id="career-title-text">Karier</span></h2>
+          <p class="section-sub">Perjalanan profesional saya.</p>
+          <div id="career-list" class="career-list"></div>
+        </section>
+
+        <section class="section-plain">
+          <h2 class="section-title"><span id="education-icon"></span><span id="education-title-text">Pendidikan</span></h2>
+          <p class="section-sub">Perjalanan pendidikan saya.</p>
+          <div id="edu-list" class="edu-list"></div>
+        </section>
+      </div>
+    </section>
+
+    <section class="page" id="page-pencapaian">
+      <div class="page-wrap">
+        <header class="page-head">
+          <h1 class="page-title">Pencapaian</h1>
+          <p class="page-sub">Koleksi sertifikat dan lencana yang telah saya raih sepanjang perjalanan profesional dan akademik saya.</p>
+        </header>
+
+        <div class="ach-toolbar">
+          <div class="ach-input-wrap">
+            <span id="ach-search-icon"></span>
+            <input id="ach-search" type="text" placeholder="Search..." />
+          </div>
+          <select id="ach-type-filter" class="ach-select">
+            <option value="all">Filter by Type</option>
+          </select>
+          <select id="ach-category-filter" class="ach-select">
+            <option value="all">Filter by Category</option>
+          </select>
+        </div>
+
+        <div id="ach-total" class="ach-total">Total: 0</div>
+        <div id="ach-grid" class="ach-grid"></div>
+      </div>
+    </section>
+
+    <section class="page" id="page-proyek">
+
+      <!-- List View -->
+      <div class="page-wrap" id="project-list-view">
+        <header class="page-head">
+          <h1 class="page-title">Proyek</h1>
+          <p class="page-sub">Etalase proyek pribadi maupun sumber terbuka (open-source) yang telah saya bangun atau kontribusikan.</p>
+        </header>
+        <div class="project-filters">
+          <div class="filter-row">
+            <span class="filter-label" id="project-filter-type-label">TIPE</span>
+            <div id="project-type-tabs" class="filter-tabs"></div>
+          </div>
+          <div class="filter-row">
+            <span class="filter-label" id="project-filter-category-label">KATEGORI</span>
+            <div id="project-category-tabs" class="filter-tabs"></div>
+          </div>
+        </div>
+        <div id="project-grid" class="project-grid"></div>
+      </div>
+
+      <!-- Detail View -->
+      <div class="page-wrap hidden" id="project-detail-view">
+        <button class="proj-back-btn" id="proj-back-btn" type="button">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          <span id="proj-back-label">Kembali</span>
+        </button>
+        <header class="proj-detail-head">
+          <h1 class="proj-detail-title" id="proj-detail-title"></h1>
+          <p class="proj-detail-desc" id="proj-detail-desc"></p>
+        </header>
+        <div class="proj-detail-meta">
+          <div class="proj-detail-tech" id="proj-detail-tech"></div>
+          <div class="proj-detail-links" id="proj-detail-links"></div>
+        </div>
+        <hr class="proj-divider" />
+        <div id="proj-readme-loading" class="proj-readme-loading hidden">
+          <span class="proj-spinner"></span>
+          <span>Memuat README dari GitHub...</span>
+        </div>
+        <div id="proj-readme-content" class="proj-readme-content hidden"></div>
+        <div id="proj-readme-fallback" class="proj-readme-fallback hidden"></div>
+      </div>
+
+    </section>
+
+    <section class="page" id="page-kegunaan">
+      <div class="page-wrap">
+        <header class="page-head">
+          <h1 class="page-title">Kegunaan</h1>
+          <p class="page-sub">Alat dan setup yang saya gunakan untuk produktivitas harian.</p>
+        </header>
+        <section class="section-plain">
+          <div id="uses-list" class="uses-list"></div>
+        </section>
+      </div>
+    </section>
+
+    <section class="page" id="page-kontak">
+      <div class="page-wrap">
+        <header class="page-head">
+          <h1 class="page-title">Kontak</h1>
+          <p class="page-sub">Temukan saya di media sosial.</p>
+        </header>
+        <section id="contact-grid" class="contact-grid"></section>
+      </div>
+    </section>
+
+    <section class="page" id="page-links">
+      <div class="page-wrap">
+        <header class="page-head">
+          <div>
+            <h1 class="page-title">Musik</h1>
+            <p class="page-sub">Apa yang sedang saya dengarkan di Spotify.</p>
+          </div>
+          <a class="spotify-open-btn" href="https://open.spotify.com/user/31oxi7bjl7fhxl6pbg4pnljpdwgy" target="_blank" rel="noreferrer">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+            Buka Spotify
+          </a>
+        </header>
+
+        <section class="section-plain">
+
+          <!-- Now Playing -->
+          <a class="sp-now-playing" id="sp-now-playing" href="#" target="_blank" rel="noreferrer">
+            <div class="sp-now-playing-art">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+            </div>
+            <div class="sp-now-playing-info">
+              <p class="sp-now-playing-label">
+                <span class="sp-pulse"></span> Memuat...
+              </p>
+              <p class="sp-now-playing-track">—</p>
+              <p class="sp-now-playing-artist">—</p>
+            </div>
+          </a>
+
+          <!-- Profile -->
+          <div class="sp-profile-card">
+            <div id="sp-profile" style="display:flex;align-items:center;gap:16px;width:100%;">
+              <div class="sp-loading"><div class="sp-spinner"></div></div>
+            </div>
+          </div>
+
+          <!-- Playlist -->
+          <div class="sp-section">
+            <div class="sp-section-header">
+              <p class="sp-section-title">Playlist saya</p>
+              <span class="sp-section-count" id="sp-playlists-count"></span>
+            </div>
+            <div id="sp-playlists">
+              <div class="sp-loading"><div class="sp-spinner"></div> Memuat...</div>
+            </div>
+          </div>
+
+          <!-- Lagu Disukai -->
+          <div class="sp-section">
+            <div class="sp-section-header">
+              <p class="sp-section-title">Lagu yang disukai</p>
+              <span class="sp-section-count" id="sp-liked-count"></span>
+            </div>
+            <div id="sp-liked-songs">
+              <div class="sp-loading"><div class="sp-spinner"></div> Memuat...</div>
+            </div>
+          </div>
+
+          <!-- Top Tracks -->
+          <div class="sp-section">
+            <div class="sp-section-header">
+              <p class="sp-section-title">Sering diputar bulan ini</p>
+            </div>
+            <div id="sp-top-tracks">
+              <div class="sp-loading"><div class="sp-spinner"></div> Memuat...</div>
+            </div>
+          </div>
+
+          <!-- Top Artists -->
+          <div class="sp-section">
+            <div class="sp-section-header">
+              <p class="sp-section-title">Artis favorit</p>
+              <span class="sp-section-count" id="sp-artists-count"></span>
+            </div>
+            <div id="sp-top-artists">
+              <div class="sp-loading"><div class="sp-spinner"></div> Memuat...</div>
+            </div>
+          </div>
+
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <div class="floating-actions">
+    <button id="back-top" class="floating-btn" title="Kembali ke atas">
+      <span id="up-icon"></span>
+    </button>
+    <a class="floating-btn" id="wa-button" href="#" target="_blank" rel="noreferrer" title="WhatsApp">
+      <span id="wa-icon"></span>
+    </a>
+  </div>
+
+  <div id="achievement-modal" class="ach-modal hidden" aria-hidden="true">
+    <div class="ach-modal-card" role="dialog" aria-modal="true" aria-labelledby="ach-modal-title">
+      <button id="ach-modal-close" class="ach-modal-close" aria-label="Tutup detail">
+        <span id="close-icon"></span>
+      </button>
+      <div class="ach-modal-media">
+        <img id="ach-modal-image" src="" alt="Detail sertifikat" />
+      </div>
+      <aside class="ach-modal-side">
+        <h3 id="ach-modal-title" class="ach-modal-title"></h3>
+        <p id="ach-modal-org" class="ach-modal-org"></p>
+        <div class="ach-modal-meta">
+          <div>
+            <span class="meta-label">CREDENTIAL ID</span>
+            <span id="ach-modal-code" class="meta-value"></span>
+          </div>
+          <div>
+            <span class="meta-label">TYPE</span>
+            <span id="ach-modal-type" class="meta-value"></span>
+          </div>
+          <div>
+            <span class="meta-label">CATEGORY</span>
+            <span id="ach-modal-category" class="meta-value"></span>
+          </div>
+          <div>
+            <span class="meta-label">ISSUE DATE</span>
+            <span id="ach-modal-date" class="meta-value"></span>
+          </div>
+        </div>
+        <a id="ach-modal-link" class="ach-modal-link" href="#" target="_blank" rel="noreferrer">
+          Credential URL
+          <span id="external-icon"></span>
+        </a>
+      </aside>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/spotify.js"></script>
+
+</body>
+</html>
